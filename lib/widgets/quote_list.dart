@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quotes_flutter_app/folders/quote.dart';
+import 'package:quotes_flutter_app/widgets/quote_card_widget.dart';
 
 
 class QuoteList extends StatefulWidget {
@@ -16,6 +17,7 @@ class _QuoteListState extends State<QuoteList> {
     Quote('The truth is rarely pure and never simple', 'author', 2),
     Quote('The light is above you', 'author', 2),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,21 +27,7 @@ class _QuoteListState extends State<QuoteList> {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisAlignment: MainAxisAlignment.start,
         children: quotes.map((quote) => 
-        Container(
-          color:Colors.redAccent[100], 
-          margin: EdgeInsets.fromLTRB(30, 10, 30, 0), 
-          padding:EdgeInsets.fromLTRB(30, 10, 30, 15), 
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(quote.content),
-              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                Text('Written by : ${quote.author}'),
-                Text('Likes by : ${quote.likes}')
-              ],),
-              
-            ],
-          ))
+          QuoteCardWidget(quote: quote)
         ).toList(),
       )
     );
