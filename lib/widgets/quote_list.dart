@@ -12,10 +12,10 @@ class QuoteList extends StatefulWidget {
 
 class _QuoteListState extends State<QuoteList> {
   List<Quote> quotes = [
-    Quote('Be yourself; everyone else is already taken', 'author', 2),
-    Quote('I have nothing to declare except my genius', 'author', 2),
-    Quote('The truth is rarely pure and never simple', 'author', 2),
-    Quote('The light is above you', 'author', 2),
+    Quote('Be yourself; everyone else is already taken', 'Fahd', 20),
+    Quote('I have nothing to declare except my genius', 'Zakaria', 22),
+    Quote('The truth is rarely pure and never simple', 'Mohamed', 20),
+    Quote('The light is above you', 'Fahd', 13),
   ];
 
   @override
